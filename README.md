@@ -5,7 +5,7 @@ En la configuración a la conexión de la Base de Datos
 
 "ConnectionStrings": {
 
-&#x20; "DefaultConnection": "Server=localhost,1433;Database=TEST;User Id=sa;Password=TU\_PASSWORD;Trusted_Connection=True;Encrypt=True;"
+&#x20; "DefaultConnection": "Server=localhost,1433;Database=TEST;User Id=sa;Password=TU\_PASSWORD;Trusted_Connection=True;TrustServerCertificate=True;Encrypt=True;"
 
 }
 
