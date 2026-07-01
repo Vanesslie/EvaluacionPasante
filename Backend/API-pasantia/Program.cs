@@ -24,6 +24,19 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+//configuracion de CORS
+builder.Services.AddCors(op =>
+{
+    op.AddPolicy("Frontend", politica =>
+    {
+        politica.WithOrigins("http://localhost:443"); //cambiar aqui el puerto segun el frontend
+        politica.AllowAnyHeader();
+        politica.AllowAnyMethod();
+    });
+});
+
+app.UseCors("Frontend");
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
